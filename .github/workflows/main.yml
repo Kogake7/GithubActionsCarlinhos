@@ -1,0 +1,22 @@
+# Nome do WorkFlow
+name: workflow legal
+
+# Evento que aciona o WorkFlow
+on: [push]
+
+# Definir trabalhos (jobs) a serem executados
+jobs: 
+  # nome do job
+  dizer-ola:
+  # definir o tipo de máquina (runner) que o job vai rodar
+  # Ubunto é a máquina linux oferecida pelo Github
+    runs-on: 'ubuntu-latest'
+    # Passos que compõe o job
+    steps: 
+       # Primeiro Passo
+     - name: Imprime Mensagem no console 
+       # Executa a linha no temrinal do container 
+       run: echo "Olá, mundo! Esse é minha primeira Github Action!"
+
+     - name: Imprime outra mensagem
+       run: echo "Até a próxima automação!" 
